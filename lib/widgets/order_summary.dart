@@ -28,7 +28,7 @@ class OrderSummary extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'SUBTOTAL',
+                          'TỔNG PHỤ',
                           style: Theme.of(context).textTheme.headline5,
                         ),
                         Text(
@@ -42,7 +42,7 @@ class OrderSummary extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'DELIVERY FEE',
+                          'PHÍ GIAO HÀNG',
                           style: Theme.of(context).textTheme.headline5,
                         ),
                         Text(
@@ -72,7 +72,7 @@ class OrderSummary extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'TOTAL',
+                          'TỔNG CỘNG',
                           style: Theme.of(context)
                               .textTheme
                               .headline5!
@@ -93,7 +93,7 @@ class OrderSummary extends StatelessWidget {
             ],
           );
         } else {
-          return const Text('Something went wrong');
+          return const Text('Đã xảy ra sự cố');
         }
       },
     );

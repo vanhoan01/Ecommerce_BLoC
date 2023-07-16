@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 //https://console.firebase.google.com/u/0/project/ecommerce-bloc-app-cd95a/firestore
+//https://github.com/abuanwar072/E-commerce-Complete-Flutter-UI/tree/master/lib
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

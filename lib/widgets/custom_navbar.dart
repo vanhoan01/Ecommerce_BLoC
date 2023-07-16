@@ -95,7 +95,7 @@ class AddToCartNavBar extends StatelessWidget {
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Added to your Wishlist!'),
+                      content: Text('Đã thêm vào danh sách Yêu thích!'),
                     ),
                   );
                   context
@@ -104,7 +104,7 @@ class AddToCartNavBar extends StatelessWidget {
                 },
               );
             }
-            return const Text('Something went wrong!');
+            return const Text('Đã xảy ra sự cố!');
           },
         ),
         BlocBuilder<CartBloc, CartState>(
@@ -125,12 +125,12 @@ class AddToCartNavBar extends StatelessWidget {
                   shape: const RoundedRectangleBorder(),
                 ),
                 child: Text(
-                  'ADD TO CART',
+                  'THÊM VÀO GIỎ HÀNG',
                   style: Theme.of(context).textTheme.headline3,
                 ),
               );
             }
-            return const Text('Something went wrong!');
+            return const Text('Đã xảy ra sự cố!');
           },
         ),
       ],
@@ -158,7 +158,7 @@ class GoToCheckoutNavBar extends StatelessWidget {
             shape: const RoundedRectangleBorder(),
           ),
           child: Text(
-            'GO TO CHECKOUT',
+            'ĐI THANH TOÁN',
             style: Theme.of(context).textTheme.headline3,
           ),
         ),
@@ -190,7 +190,7 @@ class OrderNowNavBar extends StatelessWidget {
             if (state is CheckoutLoaded) {
               if (state.paymentMethod == PaymentMethod.credit_card) {
                 return Text(
-                  'Pay with Credit Card',
+                  'Trả bằng thẻ tín dụng',
                   style: Theme.of(context)
                       .textTheme
                       .headline4!
@@ -218,13 +218,13 @@ class OrderNowNavBar extends StatelessWidget {
                   style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   child: Text(
-                    'CHOOSE PAYMENT',
+                    'CHỌN THANH TOÁN',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                 );
               }
             } else {
-              return const Text('Something went wrong');
+              return const Text('Đã xảy ra sự cố');
             }
           },
         ),

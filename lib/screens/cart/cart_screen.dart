@@ -33,7 +33,7 @@ class CartScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/checkout');
                   },
                   child: Text(
-                    'GO TO CHECKOUT',
+                    'ĐẾN THANH TOÁN',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                 ),
@@ -72,7 +72,7 @@ class CartScreen extends StatelessWidget {
                               shape: const RoundedRectangleBorder(),
                               elevation: 0),
                           child: Text(
-                            'Add More Items',
+                            'Thêm các sản phẩm khác',
                             style: Theme.of(context)
                                 .textTheme
                                 .headline5!
@@ -99,7 +99,7 @@ class CartScreen extends StatelessWidget {
                 ),
               );
             } else {
-              return const Text('Something went wrong');
+              return const Text('Đã xảy ra sự cố');
             }
           },
         ));

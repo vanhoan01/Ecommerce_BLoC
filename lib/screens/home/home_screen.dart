@@ -45,11 +45,11 @@ class HomeScreen extends StatelessWidget {
                       .toList(),
                 );
               } else {
-                return const Text('Something went wrong');
+                return const Text('Đã xảy ra sự cố');
               }
             },
           ),
-          const SectionTitle(title: 'RECOMMENDED'),
+          const SectionTitle(title: 'KHUYẾN KHÍCH'),
           BlocBuilder<ProductBloc, ProductState>(
             builder: (context, state) {
               if (state is ProductLoading) {
@@ -64,11 +64,11 @@ class HomeScreen extends StatelessWidget {
                       .toList(),
                 );
               } else {
-                return const Text('Something went wrong');
+                return const Text('Đã xảy ra sự cố');
               }
             },
           ),
-          const SectionTitle(title: 'MOST POPULAR'),
+          const SectionTitle(title: 'PHỔ BIẾN NHẤT'),
           BlocBuilder<ProductBloc, ProductState>(
             builder: (context, state) {
               if (state is ProductLoading) {
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                       .toList(),
                 );
               } else {
-                return const Text('Something went wrong');
+                return const Text('Đã xảy ra sự cố');
               }
             },
           ),

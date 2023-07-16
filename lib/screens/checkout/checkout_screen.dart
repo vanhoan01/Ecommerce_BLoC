@@ -34,7 +34,7 @@ class CheckoutScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'CUSTOMER INFORMATION',
+                    'THÔNG TIN KHÁCH HÀNG',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                   CustomTextFormField(
@@ -46,7 +46,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                   ),
                   CustomTextFormField(
-                    title: 'Full Name',
+                    title: 'Họ và tên',
                     onChanged: (value) {
                       context
                           .read<CheckoutBloc>()
@@ -55,11 +55,11 @@ class CheckoutScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'DELIVERY INFORMATION',
+                    'THÔNG TIN GIAO HÀNG',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                   CustomTextFormField(
-                    title: 'Address',
+                    title: 'Địa chỉ',
                     onChanged: (value) {
                       context
                           .read<CheckoutBloc>()
@@ -67,7 +67,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                   ),
                   CustomTextFormField(
-                    title: 'City',
+                    title: 'Thành phố',
                     onChanged: (value) {
                       context
                           .read<CheckoutBloc>()
@@ -75,7 +75,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                   ),
                   CustomTextFormField(
-                    title: 'Country',
+                    title: 'Quốc gia',
                     onChanged: (value) {
                       context
                           .read<CheckoutBloc>()
@@ -83,7 +83,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                   ),
                   CustomTextFormField(
-                    title: 'ZIP Code',
+                    title: 'Mã ZIP',
                     onChanged: (value) {
                       context
                           .read<CheckoutBloc>()
@@ -107,7 +107,7 @@ class CheckoutScreen extends StatelessWidget {
                               );
                             },
                             child: Text(
-                              'SELECT A PAYMENT METHOD',
+                              'CHỌN MỘT PHƯƠNG THỨC THANH TOÁN',
                               style: Theme.of(context)
                                   .textTheme
                                   .headline3!
@@ -127,14 +127,14 @@ class CheckoutScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'ORDER SUMMARY',
+                    'TỔNG QUAN ĐƠN HÀNG',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                   const OrderSummary()
                 ],
               );
             } else {
-              return const Text('Something went wrong');
+              return const Text('Đã xảy ra sự cố');
             }
           },
         ),

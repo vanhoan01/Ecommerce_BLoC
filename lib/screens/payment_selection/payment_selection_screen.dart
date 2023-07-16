@@ -73,12 +73,12 @@ class PaymentSelection extends StatelessWidget {
                         );
                     Navigator.pop(context);
                   },
-                  child: const Text('Pay with Credit Card'),
+                  child: const Text('Trả bằng thẻ tín dụng'),
                 ),
               ],
             );
           } else {
-            return const Text('Something went wrong');
+            return const Text('Đã xảy ra sự cố');
           }
         },
       ),

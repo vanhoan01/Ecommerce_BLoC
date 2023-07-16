@@ -45,7 +45,7 @@ class OrderConfirmation extends StatelessWidget {
                   height: 100,
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    'Your order is complete!',
+                    'Đơn đặt hàng của bạn đã hoàn tất!',
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
@@ -61,23 +61,23 @@ class OrderConfirmation extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi Massimo,',
+                    'Chào Mai,',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    'Thank you for purchasing on Zero To Unicorn.',
+                    'Cảm ơn bạn đã mua hàng trên Zero To Unicorn.',
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'ORDER CODE: #k321-ekd3',
+                    'MÃ ĐẶT HÀNG: #k321-ekd3',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   const OrderSummary(),
                   const SizedBox(height: 20),
                   Text(
-                    'ORDER DETAILS',
+                    'CHI TIẾT ĐẶT HÀNG',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   const Divider(thickness: 2),

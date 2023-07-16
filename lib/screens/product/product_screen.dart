@@ -46,7 +46,7 @@ class ProductScreen extends StatelessWidget {
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                            content: Text('Added to your Wishlist!'),
+                            content: Text('Đã thêm vào danh sách Yêu thích!'),
                           ),
                         );
                         context
@@ -55,7 +55,7 @@ class ProductScreen extends StatelessWidget {
                       },
                     );
                   }
-                  return const Text('Something went wrong!');
+                  return const Text('Đã xảy ra sự cố!');
                 },
               ),
               BlocBuilder<CartBloc, CartState>(
@@ -70,7 +70,7 @@ class ProductScreen extends StatelessWidget {
                       Navigator.pushNamed(context, '/cart');
                     },
                     child: Text(
-                      'ADD TO CART',
+                      'THÊM VÀO GIỎ HÀNG',
                       style: Theme.of(context).textTheme.headline3,
                     ),
                   );
@@ -137,13 +137,13 @@ class ProductScreen extends StatelessWidget {
             child: ExpansionTile(
               initiallyExpanded: true,
               title: Text(
-                'Product Infomation',
+                'Thông tin sản phẩm',
                 style: Theme.of(context).textTheme.headline3,
               ),
               children: [
                 ListTile(
                   title: Text(
-                    'A soft drink is any water-based flavored drink, usually but not necessarily carbonated, and typically including added sweetener.',
+                    'Nước giải khát là bất kỳ loại nước uống có hương vị nào, thường nhưng không nhất thiết phải có ga, và thường bao gồm thêm chất làm ngọt.',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 )
@@ -154,13 +154,13 @@ class ProductScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: ExpansionTile(
               title: Text(
-                'Delivery Infomation',
+                'Thông tin giao hàng',
                 style: Theme.of(context).textTheme.headline3,
               ),
               children: [
                 ListTile(
                   title: Text(
-                    'A soft drink is any water-based flavored drink, usually but not necessarily carbonated, and typically including added sweetener.',
+                    'Nước giải khát là bất kỳ loại nước uống có hương vị nào, thường nhưng không nhất thiết phải có ga, và thường bao gồm thêm chất làm ngọt.',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 )

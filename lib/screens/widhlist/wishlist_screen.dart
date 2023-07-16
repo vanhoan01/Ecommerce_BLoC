@@ -42,7 +42,7 @@ class WishlistScreen extends StatelessWidget {
               },
             );
           } else {
-            return const Text('Something went wrong!');
+            return const Text('Đã xảy ra sự cố!');
           }
         },
       ),

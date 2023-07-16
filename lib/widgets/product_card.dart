@@ -266,7 +266,7 @@ class ProductActions extends StatelessWidget {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('Added to your Cart!'),
+                  content: Text('Đã thêm vào giỏ hàng của bạn!'),
                 ),
               );
               context
@@ -283,7 +283,7 @@ class ProductActions extends StatelessWidget {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('Removed from your Cart!'),
+                  content: Text('Đã xóa khỏi Giỏ hàng của bạn!'),
                 ),
               );
               context
@@ -300,7 +300,7 @@ class ProductActions extends StatelessWidget {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
-                  content: Text('Removed from your Wishlist!'),
+                  content: Text('Đã xóa khỏi Danh sách Yêu thích!'),
                 ),
               );
               context
@@ -324,7 +324,7 @@ class ProductActions extends StatelessWidget {
             return const SizedBox();
           }
         } else {
-          return const Text('Something went wrong.');
+          return const Text('Đã xảy ra sự cố.');
         }
       },
     );
