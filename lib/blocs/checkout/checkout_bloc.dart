@@ -94,7 +94,6 @@ class CheckoutBloc extends Bloc<CheckoutEvent, CheckoutState> {
         await _checkoutRepository.addCheckouts(event.checkoutModel);
         // ignore: avoid_print
         print('Done');
-        emit(CheckoutLoading());
       } catch (_) {}
     }
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/screens.dart';
+
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   const CustomAppBar({
     Key? key,
@@ -27,6 +29,17 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       ),
       iconTheme: const IconThemeData(color: Colors.black),
       actions: [
+        IconButton(
+          onPressed: () {
+            // method to show the search bar
+            showSearch(
+              context: context,
+              // delegate to customize the search bar
+              delegate: CustomSearchDelegate(),
+            );
+          },
+          icon: const Icon(Icons.search),
+        ),
         IconButton(
           onPressed: () {
             Navigator.pushNamed(context, '/wishlist');

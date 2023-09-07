@@ -6,19 +6,30 @@ import 'package:ecommerce_bloc/models/models.dart';
 import 'package:ecommerce_bloc/repositories/repositories.dart';
 import 'package:ecommerce_bloc/screens/screens.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 //https://console.firebase.google.com/u/0/project/ecommerce-bloc-app-cd95a/firestore
-//https://github.com/abuanwar072/E-commerce-Complete-Flutter-UI/tree/master/lib
+//https://github.com/maxonflutter/flutter_ecommerce_series
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackground);
   await Hive.initFlutter();
   Hive.registerAdapter(ProductModelAdapter());
   Bloc.observer = SimpleBlocObserver();
   runApp(const MyApp());
+}
+
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackground(RemoteMessage message) async {
+  await Firebase.initializeApp();
+  if (kDebugMode) {
+    print(message.notification!.title.toString());
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -34,6 +45,9 @@ class MyApp extends StatelessWidget {
           )..add(LoadWishlist()),
         ),
         BlocProvider(create: (_) => CartBloc()..add(LoadCart())),
+        BlocProvider(
+            create: (_) =>
+                AuthBloc(authRepository: AuthRepository())..add(LoadAuth())),
         BlocProvider(create: (_) => PaymentBloc()..add(LoadPaymentMethod())),
         BlocProvider(
           create: (context) => CheckoutBloc(

@@ -5,7 +5,7 @@ import 'package:ecommerce_bloc/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
   static const String routeName = '/';
   static Route route() {
@@ -16,12 +16,17 @@ class HomeScreen extends StatelessWidget {
   }
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
         title: 'Zero To Unicorn',
       ),
-      bottomNavigationBar: const CustomNavBar(screen: routeName),
+      bottomNavigationBar: const CustomNavBar(screen: HomeScreen.routeName),
       body: Column(
         children: [
           BlocBuilder<CategoryBloc, CategoryState>(
